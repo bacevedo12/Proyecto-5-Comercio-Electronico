@@ -1,0 +1,41 @@
+
+.imagenInicio{
+    min-height: 600px;
+    background-image: url('../imagenes/foto-paginainicio.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.parrafoInicio {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: oblique;
+   text-align:center;
+   
+}
+
+.reservaInicio {
+    background-color: bisque;
+}
+
+.parrafoReserva {
+    font-family: fantasy;
+    color: coral;
+    margin-top: 600px;
+ 
+}
+
+.botonRegistrate {
+    color: coral; 
+}
+
+.carrusel {
+    background-color:gainsboro;
+}
+
+.carousel-item{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    max-height: 500px;
+    
+}

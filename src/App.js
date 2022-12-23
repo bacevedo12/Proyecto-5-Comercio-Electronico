@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import Home from './Frontend/components/Home/Home';
-import Catalogo  from './Frontend/components/Catalogo/Catalogo';
+import Inicio from './Frontend/components/Inicio/Inicio';
+import Menu  from './Frontend/components/Menu/Menu';
 import Iniciarsesion from './Frontend/components/Iniciarsesion/Iniciarsesion';
 import Miperfil from './Frontend/components/Miperfil/Miperfil';
 import Registro from './Frontend/components/Registro/Registro';
@@ -14,8 +14,8 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={ <NavBarComercio /> }>
-          <Route index element= { <Home /> }/>
-          <Route path='Catalogo' element= { <Catalogo /> }/>
+          <Route index element= { <Inicio /> }/>
+          <Route path='Menu' element= { <Menu /> }/>
           <Route path='Iniciarsesion' element= { <Iniciarsesion /> }/>
           <Route path='Registro' element= { <Registro /> }/>
           <Route path='Miperfil' element= { <Miperfil /> }/>
