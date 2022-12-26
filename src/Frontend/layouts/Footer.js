@@ -11,16 +11,16 @@ const Footer = () => {
                     <img className="imagenLogo"alt="logo"src={logo} />
                     </div>
                     <div className='col-xs-12 col-lg-3'>
-                        <h3 className="mb-4">Siguenos:</h3>
-                        <i className="fa-brands fa-square-instagram me-3"></i>
-                        <i className="fa-brands fa-facebook me-3"></i>
-                        <i class="fa-brands fa-twitter"></i>
+                        <h3 className="mb-4 fw-bolder">Siguenos:</h3>
+                        <i className="fa-brands fa-square-instagram me-3 fs-2"></i>
+                        <i className="fa-brands fa-facebook me-3 fs-2"></i>
+                        <i class="fa-brands fa-twitter fs-2"></i>
              
                     </div>
                     <div className='col-xs-12 col-lg-3'>
-                        <h3>Contacto</h3>
-                        <i class="fa-brands fa-whatsapp"></i><p className="fw-bolder">+569-82386395</p>
-                        <i class="fa-solid fa-envelope"></i><p className="fw-bolder">menu_kceros@gmail.com</p>
+                        <h3 className="fw-bolder mb-4 ">Contacto</h3>
+                        <i className="fa-brands fa-whatsapp fs-2"></i><p>+569-82386395 </p>
+                        <i className="fa-solid fa-envelope fs-2"></i><p>menu_kceros@gmail.com</p>
                     </div>
                   
                   <div className='col-12 col-md-12 d-flex justify-content-center text-center'> 

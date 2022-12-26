@@ -1,0 +1,17 @@
+.seccionformulario {
+    background-color: firebrick;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.formulario1 {
+    background-color:aliceblue;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+

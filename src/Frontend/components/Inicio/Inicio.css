@@ -39,3 +39,24 @@
     max-height: 500px;
     
 }
+
+.imagenMenuSemanal{
+  
+}
+
+@media screen and (max-width:700px){
+  .imagenMenuSemanal {
+  }
+
+    .carousel-item{
+        max-height: 400px;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+
+    .carousel-item{
+        max-height: 300px;
+    }
+}
