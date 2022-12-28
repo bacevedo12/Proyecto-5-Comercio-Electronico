@@ -1,6 +1,10 @@
 .navBar {
-    background-color:darkgray
+    background-color:darkgray;
     
+}
+
+.itemNav{
+    justify-content: end;
 }
 
 .imagenLogo {
