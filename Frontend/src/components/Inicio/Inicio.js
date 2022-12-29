@@ -6,8 +6,8 @@ import ControlledCarousel from './Carrusel'
 
 const Home = () => {
     return (
-        <div className="Contenedor">
-         <main className="row">
+        <div className="Container">
+         <main className="row m-0">
             <div className="imagenInicio">
                 <div className="seccionInicio">
                 <h1 className="parrafoInicio mt-4 fw-bolder fs-1 text-dark">Comida casera a la puerta de tu casa</h1><br></br>
