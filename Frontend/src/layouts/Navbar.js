@@ -8,7 +8,7 @@ import Footer from "./Footer";
 const NavBarComercio= () => {
   return (
     <>
-    <div className="contenedor text-dark justify-content-start">
+    <div className="container text-dark justify-content-start">
     
       <Navbar className="navBar text aling-between" variant="dark" expand="lg">
         <Container>
@@ -29,7 +29,7 @@ const NavBarComercio= () => {
         </Container>
       </Navbar>  
 
-      <section>
+      <section className="container p-0 m-0">
         <Outlet></Outlet>
       </section>
 

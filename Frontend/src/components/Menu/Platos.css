@@ -1,0 +1,24 @@
+.img_menu{
+    width:100%;
+    height: 150px;
+  }
+  .font_price{
+    color: coral;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .titulo{
+    font-family: 'Dancing Script', cursive;
+    size: 15px;
+    color: white;
+  }
+
+  .desc{
+    font-family: 'Dancing Script', cursive;
+    font-size:large;
+    color: aliceblue;
+    
+  }
+.colorcard{
+    background: linear-gradient(to bottom, rgb(216,29,72), rgb(249,181,20));
+}
