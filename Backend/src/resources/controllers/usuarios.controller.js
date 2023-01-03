@@ -1,32 +1,32 @@
-const usuarios = []
-  
-  export const createUsuario = ( req, res ) => {
-    const body = req.body
-    usuarios.push( body )
-    res.json( body )
-  }
-  
-  export const getUsuarios = ( req, res ) => {
-    res.json( usuarios )
-  }
-  
-  export const getUsuarioById = ( req, res ) => {
-    const id = req.param.id
-    const usuario = usuarios.find( usuario => usuario.id === id )
-    res.json( usuario )
-  }
-  
-  export const updateUsuarioById = ( req, res ) => {
-    const body = req.body
-    const id = req.param.id
-    const usuarioIndex = usuarios.findIndex( usuario => usuario.id === id )
-    usuarios[ usuarioIndex ] = body
-    res.json( usuarios[ usuarioIndex ] )
-  }
-  
-  export const deleteUsuarioById = ( req, res ) => {
-    const id = req.param.id
-    const usuarioIndex = usuarios.findIndex( usuario => usuario.id === id )
-    const usuarioRemoved = usuarios.splice( usuarioIndex, 1 )[ 0 ]
-    res.json( usuarioRemoved )
-  }
+import { usuarioModel } from '../model/usuarios.model.js';
+
+
+export const createUsuario = async ( req, res ) => {
+  const body = req.body
+  const newUsuario = await usuarioModel.create( body )
+  res.json( newUsuario )
+}
+
+export const getUsuarios = async ( req, res ) => {
+  const usuarios = await usuarioModel.find()
+  res.json( usuarios )
+}
+
+export const getUsuarioById = async ( req, res ) => {
+  const id = req.params.id
+  const usuario = await usuarioModel.findById( id )
+  res.json( usuario )
+}
+
+export const updateUsuarioById = async ( req, res ) => {
+  const body = req.body
+  const id = req.params.id
+  const usuarioUpdated = await usuarioModel.findByIdAndUpdate( id, body, { new: true } )
+  res.json( usuarioUpdated )
+}
+
+export const deleteUsuarioById = async ( req, res ) => {
+  const id = req.params.id
+  const usuarioRemoved = await usuarioModel.findByIdAndDelete( id )
+  res.json( usuarioRemoved )
+}
