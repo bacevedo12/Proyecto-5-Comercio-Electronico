@@ -126,5 +126,5 @@ const menu = [
 // //         img: panna_cotta,
 // //         desc: `Panna cotta de chocolate`,
 // //       },
-//    ];
+   ];
   export default menu;

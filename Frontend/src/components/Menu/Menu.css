@@ -25,7 +25,7 @@
 
 .ImagenFondo{
     opacity: 0.6;
-    position: absolute;
+    position:absolute;
     object-fit: cover;
       
 }
