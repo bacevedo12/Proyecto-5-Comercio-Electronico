@@ -1,11 +1,11 @@
 .seccionformulario {
-    background-color: firebrick;
+    background-image: url('../imagenes/foto-comidaadomicilio.jpg');
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
 .formulario1 {
-    background-color:aliceblue;
+    background-color:firebrick;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;

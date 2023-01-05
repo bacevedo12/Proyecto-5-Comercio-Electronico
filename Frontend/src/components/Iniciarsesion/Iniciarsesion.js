@@ -1,12 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "./iniciarsesion.css"
+import "./iniciarsesion.css";
 
 function Iniciarsesion() {
   return (
     <section className='seccionformulario'>
     <Form className='formulario1'>
-      <h1 className='mt-4 mb-4'>Iniciar Sesión</h1>
+      <h1 className='mt-4 mb-4 text-light'>Iniciar Sesión</h1>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control type="text" placeholder="username" />
       </Form.Group>

@@ -20,12 +20,15 @@ const NavBarComercio= () => {
           <Nav className="fw-bold fs-5 itemNav ">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/Menu">Menú</Nav.Link>
-            <Nav.Link as={Link} to="/Iniciarsesion">Iniciar sesion</Nav.Link>
             <Nav.Link as={Link} to="/Registro">Registro</Nav.Link>
             <Nav.Link as={Link} to="/Miperfil">Mi perfil</Nav.Link>
            
           </Nav>
           </Navbar.Collapse>
+          <Nav>
+          <Nav.Link as={Link} to="/Iniciarsesion"><i className="fa-sharp fa-solid fa-user fs-3 me-3 text-light"></i></Nav.Link>
+          <Nav.Link><i className="fa-sharp fa-solid fa-cart-shopping fs-3 me-3 text-light"></i></Nav.Link>         
+          </Nav>
         </Container>
       </Navbar>  
 

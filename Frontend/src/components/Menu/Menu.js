@@ -3,7 +3,7 @@ import './Menu.css';
 import menu from './Data.js'
 import Platos from "./Platos.js";
 import Instrucciones from './Instrucciones.js';
-import Imagen_Fondo from '../imagenes/foto-comidaadomicilio.jpg'
+// import Imagen_Fondo from '../imagenes/foto-comidaadomicilio.jpg'
 
 
 const platoCasero = menu.filter((element) => element.category === "Casero");
@@ -20,11 +20,13 @@ const Menu = () => {
                         <Instrucciones/>
                     <hr></hr>
                     <h1 className='Titulo'>Platos Caseros</h1>
-                    <img src={Imagen_Fondo} alt='imagen de fondo' className='ImagenFondo'></img>
+                    <div className='ImagenFondo'>
+                    {/* <img src={Imagen_Fondo} alt='imagen de fondo' className='ImagenFondo'></img> */}
                     
                         <div className='d-flex justify-content-center'>            
                             <Platos items={platoCasero}/>
                         </div> 
+                    </div>      
               </div>  
             </div>
         </div>
