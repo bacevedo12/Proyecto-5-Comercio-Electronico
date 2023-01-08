@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import "./registro.css"
 import React, { useState } from "react";
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 
 const Registro = () => {
@@ -9,9 +9,9 @@ const Registro = () => {
     const valorInicial = {
         nombre:'',
         apellido:'',
-        dirección:'',
+        direccion:'',
         telefono:'',
-        mail:'',
+        email:'',
         username:'',
         password:''
     }
@@ -82,15 +82,15 @@ const Registro = () => {
                  onChange={capturarInputs} value={usuario.telefono}/>
                 </div>
                 <div>
-                <input className="mb-3 p-1" type="email" id="email" name="email" placeholder="Mail"
-                 onChange={capturarInputs} value={usuario.mail} />
+                <input className="mb-3 p-1" type="email" id="email" name="email" placeholder="Email"
+                 onChange={capturarInputs} value={usuario.email} />
                 </div>
                 <div>
                 <input className="mb-3 p-1" type="text" id="username" name="username" placeholder="username"
                  onChange={capturarInputs} value={usuario.username} />
                 </div>
                 <div>
-                <input className="mb-3 p-1" type="text" id="password" name="password" placeholder="password"
+                <input className="mb-3 p-1" type="password" id="password" name="password" placeholder="password"
                  onChange={capturarInputs} value={usuario.password} />
                 </div>
                 <div>

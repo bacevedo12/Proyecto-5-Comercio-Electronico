@@ -14,7 +14,7 @@ const Footer = () => {
                         <h3 className="mb-4 fw-bolder">Siguenos:</h3>
                         <i className="fa-brands fa-square-instagram me-3 fs-2"></i>
                         <i className="fa-brands fa-facebook me-3 fs-2"></i>
-                        <i class="fa-brands fa-twitter fs-2"></i>
+                        <i className="fa-brands fa-twitter fs-2"></i>
              
                     </div>
                     <div className='col-xs-12 col-lg-4'>
