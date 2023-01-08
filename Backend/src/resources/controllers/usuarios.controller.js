@@ -4,6 +4,7 @@ import { usuarioModel } from '../model/usuarios.model.js';
 export const createUsuario = async ( req, res ) => {
   try{
     const user  = new usuarioModel(req.body);
+    user.hashPassword(req.body.password);
     let resultado;
     user.save().then((data) => resultado = data);
     return res.json ({

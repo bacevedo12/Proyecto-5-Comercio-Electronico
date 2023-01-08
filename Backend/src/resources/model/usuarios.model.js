@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-
+import mongoose from 'mongoose';
+import crypto from 'crypto';
 
 const usuarioSchema = new mongoose.Schema( {
   nombre: {
@@ -32,6 +32,17 @@ const usuarioSchema = new mongoose.Schema( {
 
   }
 } )
+
+usuarioSchema.methods.hashPassword = function (password) {
+  this.salt = crypto.randomBytes(16).toString("hex");
+  this.password = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
+}
+
+usuarioSchema.methods.validPassword = function (password) {
+  let hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
+  return this.password === hash;
+}
+
 
 // Se crea la instancia del modelo.
 export const usuarioModel = new mongoose.model( 'usuario', usuarioSchema )
