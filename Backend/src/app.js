@@ -2,6 +2,7 @@ import express from 'express';
 import { startConnection } from './config/database.config.js';
 import environment from './config/environment.js';
 import usuariosRouter from './resources/routes/usuarios.routes.js';
+import menuRouter from './resources/menu/routes/menu.routes.js';
 
 // Se crea una instancia de una aplicación express
 const app = express();
@@ -19,6 +20,7 @@ app.get( '/', function ( req, res ) {
 
 // Se agrega el endpoint de products
 app.use( usuariosRouter )
+app.use( menuRouter )
 
 // Se inicia la aplicación y se queda escuchando requests
 console.log( `APLICATION INICIARÁ EN EL PUERTO: ${ environment.PORT }` )
