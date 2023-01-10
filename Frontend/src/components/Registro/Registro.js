@@ -26,6 +26,24 @@ const Registro = () => {
     const guardarDatos = async(e) => {
         e.preventDefault();
         console.log(usuario);
+        try {
+            let config = {
+                method:'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body:usuario
+            }
+
+            let res = await fetch ('http://localhost:3005/usuarios', {config})
+            let json = await res.json()
+
+            console.log(json)
+        }catch (error){
+            console.error(error)
+
+        }
     //     if (usuario.nombre === '' || usuario.apellido === '' || usuario.direccion === '' ||usuario.telefono === '' || usuario.mail === '' || usuario.username === '' || usuario.password === '' ||) {
     //         Swal.fire(
     //             'Ups algo a fallado, intente nuevamente!',
