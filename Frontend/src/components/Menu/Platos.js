@@ -20,7 +20,7 @@ const Platos = ({items}) =>{
                   {desc} <br/>
                   {price}
                 </Card.Text>
-                <button type="button" class="btn btn-info">Agregar</button>
+                <button type="button" className="btn btn-info">Agregar</button>
               </Card.Body>
             </Card>
         )

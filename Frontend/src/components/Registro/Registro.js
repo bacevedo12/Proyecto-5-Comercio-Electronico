@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import "./registro.css"
 import React, { useState } from "react";
 // import Swal from 'sweetalert2';
-
+const url_api = 'http://localhost:3005';
 
 const Registro = () => {
  
@@ -36,7 +36,7 @@ const Registro = () => {
                 body:usuario
             }
 
-            let res = await fetch ('http://localhost:3005/usuarios', {config})
+            let res = await fetch (`${url_api}/usuarios`, {config})
             let json = await res.json()
 
             console.log(json)

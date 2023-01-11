@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 import "./Miperfil.css"
 
 const Miperfil = () => {
@@ -44,6 +45,9 @@ const Miperfil = () => {
     <div>
        <label className="me-4 mb-3">Email</label>
        <input></input>
+    </div>
+    <div>
+    <Button className='mt-4 mb-4' variant="secondary">Actualizar datos</Button>
     </div>
     </div>
     </div>
