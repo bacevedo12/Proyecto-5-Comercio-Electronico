@@ -14,7 +14,7 @@ startConnection()
 // Se configura un middleware para aceptar requests de tipo JSON
 app.use( express.json() )
 
-app.use(cors());
+app.use(cors({origin:'*'}));
 
 // Se agrega una ruta (endpoint) por defecto
 app.get( '/', function ( req, res ) {

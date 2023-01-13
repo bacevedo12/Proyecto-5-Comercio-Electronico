@@ -4,6 +4,8 @@ import React, { useState } from "react";
 // import Swal from 'sweetalert2';
 const url_api = 'http://localhost:3005';
 
+
+
 const Registro = () => {
  
     const valorInicial = {
@@ -23,8 +25,9 @@ const Registro = () => {
         setUsuario({...usuario, [name]:value})
     }
 
-    const guardarDatos = async(e) => {
+    const guardarDatos = async (e) => {
         e.preventDefault();
+
         console.log(usuario);
         try {
             let config = {
@@ -33,10 +36,10 @@ const Registro = () => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
                 },
-                body:usuario
+                body:JSON.stringify(usuario)
             }
 
-            let res = await fetch (`${url_api}/usuarios`, {config})
+            let res = await fetch (`${url_api}/usuarios`, config)
             let json = await res.json()
 
             console.log(json)
