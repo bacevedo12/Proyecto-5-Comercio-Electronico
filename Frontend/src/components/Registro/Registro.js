@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import "./registro.css"
 import React, { useState } from "react";
-import Swal from 'sweetalert2';
+//import Swal from 'sweetalert2';
 
 
 const Registro = () => {

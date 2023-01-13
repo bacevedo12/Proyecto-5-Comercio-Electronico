@@ -15,7 +15,7 @@ const Menu = () => {
              <div className='container p-0'>
                                
                 <div className='ContenidoPlatos'>
-                    <h1 className='Titulo'>Platos</h1>
+                    <h1 className='Titulo'>Instrucciones</h1>
                     <hr></hr>
                         <Instrucciones/>
                     <hr></hr>
