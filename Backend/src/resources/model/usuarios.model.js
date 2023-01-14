@@ -18,7 +18,7 @@ const usuarioSchema = new mongoose.Schema( {
     type: Number,
     required: true,
   },
-  mail:{
+  email:{
     type: String,
     required:true,
   },

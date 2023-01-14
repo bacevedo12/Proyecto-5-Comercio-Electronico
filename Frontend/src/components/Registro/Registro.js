@@ -1,7 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import "./registro.css"
 import React, { useState } from "react";
-//import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
+const url_api = 'http://localhost:3005';
+
 
 
 const Registro = () => {
@@ -9,9 +11,9 @@ const Registro = () => {
     const valorInicial = {
         nombre:'',
         apellido:'',
-        dirección:'',
+        direccion:'',
         telefono:'',
-        mail:'',
+        email:'',
         username:'',
         password:''
     }
@@ -23,9 +25,28 @@ const Registro = () => {
         setUsuario({...usuario, [name]:value})
     }
 
-    const guardarDatos = async(e) => {
+    const guardarDatos = async (e) => {
         e.preventDefault();
+
         console.log(usuario);
+        try {
+            let config = {
+                method:'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body:JSON.stringify(usuario)
+            }
+
+            let res = await fetch (`${url_api}/usuarios`, config)
+            let json = await res.json()
+
+            console.log(json)
+        }catch (error){
+            console.error(error)
+
+        }
     //     if (usuario.nombre === '' || usuario.apellido === '' || usuario.direccion === '' ||usuario.telefono === '' || usuario.mail === '' || usuario.username === '' || usuario.password === '' ||) {
     //         Swal.fire(
     //             'Ups algo a fallado, intente nuevamente!',
@@ -82,15 +103,15 @@ const Registro = () => {
                  onChange={capturarInputs} value={usuario.telefono}/>
                 </div>
                 <div>
-                <input className="mb-3 p-1" type="email" id="email" name="email" placeholder="Mail"
-                 onChange={capturarInputs} value={usuario.mail} />
+                <input className="mb-3 p-1" type="email" id="email" name="email" placeholder="Email"
+                 onChange={capturarInputs} value={usuario.email} />
                 </div>
                 <div>
                 <input className="mb-3 p-1" type="text" id="username" name="username" placeholder="username"
                  onChange={capturarInputs} value={usuario.username} />
                 </div>
                 <div>
-                <input className="mb-3 p-1" type="text" id="password" name="password" placeholder="password"
+                <input className="mb-3 p-1" type="password" id="password" name="password" placeholder="password"
                  onChange={capturarInputs} value={usuario.password} />
                 </div>
                 <div>
