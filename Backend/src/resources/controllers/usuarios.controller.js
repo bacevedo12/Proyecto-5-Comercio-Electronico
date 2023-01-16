@@ -1,5 +1,5 @@
 import { usuarioModel } from '../model/usuarios.model.js';
-import jwt from '../../../auth/jwt.js';
+import {getToken} from '../../../auth/jwt.js';
 //const jwt = require("../auth/jwt.js");
 
 
@@ -94,14 +94,15 @@ export const signin = async (req, res) => {
       // password: req.body.password,
       //active: true
     }
-    const u = await user.findOne(filter);
+    console.log (req.body)
+    const u = await usuarioModel.findOne(filter);
     if (u && u?.validPassword(req.body.password)) {
       return res.json({
         msg: "ok",
-        token: jwt.getToken(req.body.username)
+        token: getToken(req.body.username)
       });
     } else {
-      console.warn("intengo de ingreso no autorizaado!! ");
+      console.warn("intento de ingreso no autorizaado!! ");
       return res.status(401).json({
         msg: "unauthorized",
         details: "this user is not authorized for this endpoint"
@@ -110,7 +111,7 @@ export const signin = async (req, res) => {
   } catch (error) {
     return res.json({
       msg: "error en autenticación",
-      details: error.message()
+      details: error.message
     })
   }
 }

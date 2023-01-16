@@ -2,16 +2,17 @@ import jwt from 'jsonwebtoken';
 
 //const jwt = require("jsonwebtoken");
 
-require("dotenv").config();
+import * as dotenv from 'dotenv';
 
-const getToken = (username) => {
+dotenv.config();
+
+export const getToken = (username) => {
   return jwt.sign({
     sub: username,
   }, process.env.SECRET);
 }
 
-const validateToken = (token) => {
+export const validateToken = (token) => {
   return jwt.validateToken(token, process.env.SECRET);
 }
 
-module.exports = { getToken, validateToken };

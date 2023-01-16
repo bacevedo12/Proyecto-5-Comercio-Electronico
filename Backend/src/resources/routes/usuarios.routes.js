@@ -1,17 +1,6 @@
 import { Router } from 'express'
 import { signin, createUsuario, deleteUsuarioById, getUsuarioById, getUsuarios, updateUsuarioById } from '../controllers/usuarios.controller.js'
 
-
-const auth = require("../auth/auth");
-
-router.get("/all", auth, findAll);
-router.get("/one", auth, findOne);
-
-router.post("/signup", signup);
-router.post("/signin", signin)
-
-module.exports = router;
-
 const usuariosRouter = Router()
 
 

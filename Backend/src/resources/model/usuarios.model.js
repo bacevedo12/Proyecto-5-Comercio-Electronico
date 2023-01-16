@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
+import { stringify } from 'querystring';
+
 
 const usuarioSchema = new mongoose.Schema( {
   nombre: {
@@ -28,19 +30,24 @@ const usuarioSchema = new mongoose.Schema( {
   },
   password:{
     type: String,
-    require: true,
+    required:true,
 
+  },
+  salt: {
+    type: String,
+    required:true, 
   }
 } )
 
 usuarioSchema.methods.hashPassword = function (password) {
-  this.salt = crypto.randomBytes(16).toString("hex");
+  this.salt = crypto.randomBytes(16).toString("hex")
   this.password = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
 }
 
 usuarioSchema.methods.validPassword = function (password) {
-  let hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
-  return this.password === hash;
+  
+  const hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, "sha512").toString("hex");
+  return hash === this.password;
 }
 
 
