@@ -4,7 +4,7 @@ function Instrucciones() {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Solicita tu pedido</Accordion.Header>
+        <Accordion.Header className='bg'>Solicita tu pedido</Accordion.Header>
         <Accordion.Body>
           Selecciona los platos que deseas pedir, agregalos al carrito de compra y los despacharemos al día siguiente.
           Pide antes de las 20hrs de hoy y llegará mañana durante el día!

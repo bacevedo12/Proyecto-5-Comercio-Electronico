@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { createPlato, deletePlatoById,getPlatos, getPlatoById, updatePlatoById } from '../controllers/menu.controller.js'
+import { createPlato, deletePlatoById, getPlatos, getPlatoById, updatePlatoById } from '../controllers/menu.controller.js'
 
 
 const platosRouter = Router()

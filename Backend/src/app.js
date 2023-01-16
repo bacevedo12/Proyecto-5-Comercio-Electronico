@@ -4,6 +4,8 @@ import environment from './config/environment.js';
 import usuariosRouter from './resources/routes/usuarios.routes.js';
 import menuRouter from './resources/menu/routes/menu.routes.js';
 import cors from 'cors';
+import fileUpload from 'express-fileupload'
+import authRouter from './resources/routes/auth.routes.js'; 
 
 // Se crea una instancia de una aplicación express
 const app = express();
@@ -16,6 +18,12 @@ app.use( express.json() )
 
 app.use(cors({origin:'*'}));
 
+//para poder cargr archivos
+app.use(fileUpload({
+    useTempFiles : true,
+    tempFileDir : './uploads'
+}));
+
 // Se agrega una ruta (endpoint) por defecto
 app.get( '/', function ( req, res ) {
  res.json( { message: "hola mundo" } );
@@ -24,6 +32,7 @@ app.get( '/', function ( req, res ) {
 // Se agrega el endpoint de products
 app.use( usuariosRouter )
 app.use( menuRouter )
+app.use( authRouter )
 
 // Se inicia la aplicación y se queda escuchando requests
 console.log( `APLICATION INICIARÁ EN EL PUERTO: ${ environment.PORT }` )

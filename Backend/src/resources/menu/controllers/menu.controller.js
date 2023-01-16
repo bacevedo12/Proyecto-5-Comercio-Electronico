@@ -1,10 +1,17 @@
 import { menuModel } from '../model/menu.model.js';
+import { uploadimage } from '../../../config/cloudinary.js';
+
 
 
 export const createPlato = async ( req, res ) => {
   try{
+
     const plato  = new menuModel(req.body);
     let resultado;
+    if(req.files?.image){
+      const result= await uploadimage(req.files.image.tempFilePath)
+      console.log(result)
+    }
     plato.save().then((data) => resultado = data);
     return res.json ({
       msg: "plato creado",

@@ -1,4 +1,6 @@
 import { usuarioModel } from '../model/usuarios.model.js';
+import {getToken} from '../../../auth/jwt.js';
+//const jwt = require("../auth/jwt.js");
 
 
 export const createUsuario = async ( req, res ) => {
@@ -81,4 +83,35 @@ export const deleteUsuarioById = async ( req, res ) => {
     });
  } 
   
+}
+
+/* parte signin*/
+
+export const signin = async (req, res) => {
+  try {
+    const filter = {
+      username: req.body.username,
+      // password: req.body.password,
+      //active: true
+    }
+    console.log (req.body)
+    const u = await usuarioModel.findOne(filter);
+    if (u && u?.validPassword(req.body.password)) {
+      return res.json({
+        msg: "ok",
+        token: getToken(req.body.username)
+      });
+    } else {
+      console.warn("intento de ingreso no autorizaado!! ");
+      return res.status(401).json({
+        msg: "unauthorized",
+        details: "this user is not authorized for this endpoint"
+      })
+    }
+  } catch (error) {
+    return res.json({
+      msg: "error en autenticación",
+      details: error.message
+    })
+  }
 }
