@@ -1,4 +1,4 @@
-import {expressjwt as jwt} from 'express-jwt';
+import { expressjwt as jwt } from 'express-jwt';
 import * as dotenv from 'dotenv';
 
 //const { expressjwt: jwt } = require("express-jwt");

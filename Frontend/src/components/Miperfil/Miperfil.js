@@ -1,48 +1,50 @@
 
+import { useEffect } from 'react';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-// import { getUsers } from '../api/Api.js';
+import { getUsers } from '../api/Api.js';
 import "./Miperfil.css"
-// import { Usuario } from './usuario';
-// import { UsuarioItem } from './usuarioItems';
+import { Usuario } from './usuario';
+import { UsuarioItem } from './usuarioItems';
 
 const Miperfil = () => {
  
 
-        // const [usuario, setUsuario] = React.useState([]);
+        const [usuario, setUsuario] = React.useState([]);
       
-        // useEffect(() => {
-        //   getUsers()
-        //     .then((data) => {
-        //       setUsuario(data);
-        //     })
-        //     .catch((err) => {
-        //       console.log(err);
-        //     });
-        // });
+        useEffect(() => {
+          getUsers()
+            .then((data) => {
+              setUsuario(data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        getUsers()
+        });
       
-        // return (
-        //   <div className="App">
-        //     <h1>Listado de usuarios</h1>
       
-        //     <Usuario>
-        //       {
-        //         usuario.map((usuario) => (
-        //           <UsuarioItem
-        //             key={usuario._id}
-        //             nombre={usuario.name}
-        //             apellido={usuario.apellido}
-        //             direccion={usuario.direccion}
-        //             telefono={usuario.telefono}
-        //             email={usuario.email}
-        //           />
+          <div className="App">
+            <h1>Listado de usuarios</h1>
       
-        //         ))
-        //       }
-        //     </Usuario>
+            <Usuario>
+              {
+                usuario.map((usuario) => (
+                  <UsuarioItem
+                    key={usuario._id}
+                    nombre={usuario.name}
+                    apellido={usuario.apellido}
+                    direccion={usuario.direccion}
+                    telefono={usuario.telefono}
+                    email={usuario.email}
+                  />
       
-        //   </div>
-        // )
+                ))
+              }
+            </Usuario>
+      
+          </div>
+     
       
    
 

@@ -18,7 +18,7 @@ app.use( express.json() )
 
 app.use(cors({origin:'*'}));
 
-//para poder cargr archivos
+// para poder cargr archivos
 app.use(fileUpload({
     useTempFiles : true,
     tempFileDir : './uploads'
