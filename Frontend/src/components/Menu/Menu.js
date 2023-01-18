@@ -1,10 +1,9 @@
-
 import './Menu.css';
-import menu from './Data.js'
+//import menu from './Data.js'
 import Platos from "./Platos.js";
 import Instrucciones from './Instrucciones.js';
 import { useState, useEffect } from 'react';
-import axios from 'axios'; 
+//import axios from 'axios'; 
 import { url_api } from '../api/Api';
 
 
@@ -14,25 +13,25 @@ import { url_api } from '../api/Api';
 
 
 
-const platoCasero = menu.filter((element) => element.category === "Casero");
-console.log (platoCasero)
+//const platoCasero = menu.filter((element) => element.category === "Casero");
+//console.log (platoCasero)
 
 const Menu = () => {
  
-const [menu, setMenu]= useState({})
+    const [menu, setMenu]= useState([])
     
     useEffect(()=> {
         
         const getMenu = async() => {
-            const result = await axios.get(`${url_api}/platos`);
-            console.log(result);
-            setMenu(result.data.platos)
+            const result = await fetch(`${url_api}/platos`);
+            const menu = await result.json();
+            
+            
+            console.log(menu.platos)
+            setMenu(menu.platos)
           }
           getMenu();
     }, [])
-
-console.log (menu)
-
 
     return (
         <div className="fondo">
@@ -58,5 +57,3 @@ console.log (menu)
 }
 
 export default Menu
-
-
