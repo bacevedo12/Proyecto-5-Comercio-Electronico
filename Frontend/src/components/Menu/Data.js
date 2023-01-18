@@ -1,6 +1,9 @@
-import Aji_Gallina from './Imagenes/Aji-Gallina.jpeg'
-import Chanchito_Mongoliano from './Imagenes/Chanchito_Mongoliano.jpeg'
-import Charquican from './Imagenes/charquican.jpeg'
+//import { useState } from "react";
+
+
+// import Aji_Gallina from './Imagenes/Aji-Gallina.jpeg'
+// import Chanchito_Mongoliano from './Imagenes/Chanchito_Mongoliano.jpeg'
+// import Charquican from './Imagenes/charquican.jpeg'
 // import Croqueta_Atun from './Imagenes/Croqueta_Atun_pure.jpeg'
 // import Estofado_Papines from './Imagenes/estofado-papines.jpeg'
 // import Guiso_Garbanzos from './Imagenes/Lentejas.jpeg'
@@ -15,33 +18,33 @@ import Charquican from './Imagenes/charquican.jpeg'
 //import Tortilla_Zanahoria from './Imagenes/Aji_Gallina.jpg'
 //import Zapallo_Italiano from './Imagenes/Aji_Gallina.jpg'
 
-const menu = [
-    {
-      id: 1,
-      title: 'Ají de Gallina',
-      category: 'Casero',
-      price: "$4.500",
-      img: Aji_Gallina,
-      desc: `Ají de Gallina casero `,
-    },
+// const menu = [
+//     {
+//       id: 1,
+//       title: 'Ají de Gallina',
+//       category: 'Casero',
+//       price: "$4.500",
+//       img: Aji_Gallina,
+//       desc: `Ají de Gallina casero `,
+//     },
 
-    {
-      id: 2,
-      title: 'Chanchito Mongoliano',
-      category: 'Casero',
-      price: "$4.500",
-      img: Chanchito_Mongoliano,
-      desc: `Chancho Mongoliando cocinado en sus jugos `,
-    },
+//     {
+//       id: 2,
+//       title: 'Chanchito Mongoliano',
+//       category: 'Casero',
+//       price: "$4.500",
+//       img: Chanchito_Mongoliano,
+//       desc: `Chancho Mongoliando cocinado en sus jugos `,
+//     },
 
-    {
-      id: 3,
-      title: 'Charquican',
-      category: 'Casero',
-      price: "$4.500",
-      img: Charquican,
-      desc: `Charquican`,
-    }
+//     {
+//       id: 3,
+//       title: 'Charquican',
+//       category: 'Casero',
+//       price: "$4.500",
+//       img: Charquican,
+//       desc: `Charquican`,
+//     }
 // //     {
 // //       id: 4,
 // //       title: 'Chupe de Jaiba',
@@ -126,5 +129,5 @@ const menu = [
 // //         img: panna_cotta,
 // //         desc: `Panna cotta de chocolate`,
 // //       },
-   ];
-  export default menu;
+  //  ];
+  // export default menu;
