@@ -3,7 +3,7 @@ import React from "react";
 import './Platos.css';
 //import { useState, useEffect } from 'react';
 //import Aji_Gallina from './Imagenes/Aji-Gallina.jpeg'
-
+import { useNavigate } from 'react-router-dom';
 
 
 const Platos = ({items}) =>{

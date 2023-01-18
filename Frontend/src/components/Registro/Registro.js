@@ -47,33 +47,7 @@ const Registro = () => {
             console.error(error)
 
         }
-    //     if (usuario.nombre === '' || usuario.apellido === '' || usuario.direccion === '' ||usuario.telefono === '' || usuario.mail === '' || usuario.username === '' || usuario.password === '' ||) {
-    //         Swal.fire(
-    //             'Ups algo a fallado, intente nuevamente!',
-    //             '',
-    //             'warning'
-    //           );
-    //     // }else {
-    //     //     try {
-    //     //         await addDoc(collection(db,'reservas'), {
-    //     //             ...reserva
-    //     //         })
-    //     //         Swal.fire(
-    //     //             'Su reserva se ha enviado con exito!',
-    //     //             '',
-    //     //             'success'
-    //     //           )
-    //     //     } catch (error) {
-    //     //         console.log(error);
-    //     //         Swal.fire(
-    //     //             'Ups algo a fallado, intente nuevamente!',
-    //     //             '',
-    //     //             'warning'
-    //     //           )
-    //     //     }
-             
-    //     }
-    //     setUsuario({...valorInicial})
+
     }
 
 

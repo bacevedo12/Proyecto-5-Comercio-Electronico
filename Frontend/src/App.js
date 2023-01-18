@@ -6,7 +6,7 @@ import Iniciarsesion from './components/Iniciarsesion/Iniciarsesion';
 import Miperfil from './components/Miperfil/Miperfil';
 import Registro from './components/Registro/Registro';
 import NavBarComercio from './layouts/Navbar';
-import  CarritoCompra  from './components/CarritoCompra/CarritoCompra';
+import ShoppingCard from './components/ShoppingCard/ShoppingCard';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path='Iniciarsesion' element= { <Iniciarsesion /> }/>
           <Route path='Registro' element= { <Registro /> }/>
           <Route path='Miperfil' element= { <Miperfil /> }/>
-          <Route path='CarritoCompra' element= { <CarritoCompra /> }/>
+          <Route path='ShoppingCard' element= { <ShoppingCard /> }/>
           <Route path='*' element= { <Navigate replace to="/" /> }/>
 
         </Route>
