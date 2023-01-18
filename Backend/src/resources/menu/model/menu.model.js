@@ -17,7 +17,7 @@ const menuSchema = new mongoose.Schema( {
     trim: true,
     
   },
-  description: {
+  desc: {
     type: String,
     required: true,
     trim: true,
