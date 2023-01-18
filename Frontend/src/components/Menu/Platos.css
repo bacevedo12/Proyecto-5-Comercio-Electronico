@@ -3,22 +3,42 @@
     height: 150px;
   }
   .font_price{
+    background: rgba(247, 243, 243, 0.573);
     color: coral;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat,sans-serif';
   }
 
   .titulo{
-    font-family: 'Dancing Script', cursive;
+    background: rgba(247, 243, 243, 0.573);
+    font-family: 'Montserrat,sans-serif';
     size: 15px;
-    color: white;
+    color: black;
   }
 
   .desc{
-    font-family: 'Dancing Script', cursive;
+    background: rgba(247, 243, 243, 0.573);
+    font-family: 'Montserrat,sans-serif';
     font-size:large;
-    color: aliceblue;
+    color: black;
     
   }
 .colorcard{
-    background: linear-gradient(to bottom, rgb(216,29,72), rgb(249,181,20));
+    background-image: url(../imagenes/patrontarjeta.jpg)
+}
+
+.boton {
+  background-color: #000;
+    color: #fff;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 288px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: .5px;
+    text-align: center;
 }
