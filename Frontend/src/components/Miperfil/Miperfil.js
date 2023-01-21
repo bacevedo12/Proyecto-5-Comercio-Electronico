@@ -7,6 +7,7 @@ import "./Miperfil.css"
 import { Usuario } from './usuario';
 import { UsuarioItem } from './usuarioItems';
 
+
 const Miperfil = () => {
  
   // const [usuario, setUsuario]= useState([])
@@ -28,14 +29,14 @@ const Miperfil = () => {
         const [usuario, setUsuario] = React.useState([]);
       
         useEffect(() => {
-          getUsers()
+          getUser()
             .then((data) => {
               setUsuario(data);
             })
             .catch((err) => {
               console.log(err);
             });
-        getUsers()
+        getUse()
         });
       
       

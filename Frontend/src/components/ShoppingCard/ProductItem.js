@@ -1,7 +1,7 @@
 import "./shoppingcard.css"
 import ShoppingCard from "./ShoppingCard.js"
 
-const ProductItem = ({data, addToCart}) => {
+export const ProductItem = ({data, addToCart}) => {
     let{id,name,price} = data;
     return(
         <div className="cardCarritoCompra" style={{border:"thin solid gray", paddind:"1rem"}} >

@@ -6,9 +6,11 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-export const getToken = (username) => {
+export const getToken = (id, username) => {
   return jwt.sign({
-    sub: username,
+     username,
+     id
+
   }, process.env.SECRET);
 }
 
