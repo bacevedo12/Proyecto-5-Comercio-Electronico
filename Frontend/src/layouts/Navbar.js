@@ -27,7 +27,7 @@ const NavBarComercio= () => {
           </Navbar.Collapse>
           <Nav>
           <Nav.Link as={Link} to="/Iniciarsesion"><i className="fa-sharp fa-solid fa-user fs-3 me-3 text-light"></i></Nav.Link>
-          <Nav.Link><i className="fa-sharp fa-solid fa-cart-shopping fs-3 me-3 text-light"></i></Nav.Link>         
+          <Nav.Link as={Link} to="/Cart"><i className="fa-sharp fa-solid fa-cart-shopping fs-3 me-3 text-light"></i></Nav.Link>         
           </Nav>
         </Container>
       </Navbar>  
