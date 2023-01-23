@@ -1,3 +1,42 @@
+# <img src="https://github.com/bacevedo12/Proyecto-5-Comercio-Electronico/blob/main/Frontend/src/components/imagenes/logo.jpg" width=50/> Proyecto 5 E-commerce "Menú K-ceros"
+
+## Menú K-ceros.
+
+Página web desarrollada para un negocio familiar de venta de comida casera a domicilio, donde el consumidor podrá escoger su menú diario, semanal o mensual y será entregado en la puerta de su casa congelado, listo para calentar y servir. 
+
+***
+
+## Ingreso a la pagina
+
+Podrás acceder a la pagina mediante el siguiente link:xxxx
+
+## Contrucción de la pagina
+
+La pagina web fue construida, el backend, con Node.js, express.js, express-jwt, mongoose, jsonwebtoken, usando como base de datos MongoDB.
+
+El lado del Frontend fue contruido con React.js, React-router-dom, useState, UseEffect, boostrap, Axios, context-Api y como pasarela de pago se utilizó PayPal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
