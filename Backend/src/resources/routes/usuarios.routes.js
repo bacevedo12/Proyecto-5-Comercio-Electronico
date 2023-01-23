@@ -12,6 +12,7 @@ usuariosRouter.get( `${ baseURI }/:id`, getUsuarioById )
 usuariosRouter.put( `${ baseURI }/:id`, updateUsuarioById )
 usuariosRouter.delete( `${ baseURI }/:id`, deleteUsuarioById )
 
+
 usuariosRouter.post(`${ baseURI }/signin`, signin)
 
 

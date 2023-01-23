@@ -1,6 +1,6 @@
 import { usuarioModel } from '../model/usuarios.model.js';
-import {getToken} from '../../../auth/jwt.js';
-//const jwt = require("../auth/jwt.js");
+import {getToken, verifyToken} from '../../../auth/jwt.js';
+// import jwt from '../../../auth/jwt.js';
 
 
 export const createUsuario = async ( req, res ) => {
@@ -23,11 +23,6 @@ export const createUsuario = async ( req, res ) => {
 }
 
 
-//   const body = req.body
-//   const newUsuario = await usuarioModel.create( body )
-//   res.json( newUsuario )
-// }
-
 export const getUsuarios = async ( req, res ) => {
   try {
     const usuarios = await usuarioModel.find()
@@ -40,6 +35,21 @@ export const getUsuarios = async ( req, res ) => {
   }
   
 }
+
+// export const getByUser = async (req, res) => {
+//   try {
+//     const username = jwt.verifyToken(req)
+//     // console.log(`buscando post de ${username}`);
+//     const u = await user.findOne({ username: username });
+//     const result = await post.find({ user: u });
+//     return res.json({ result });
+//   } catch (error) {
+//     return res.status(500).json({
+//       msg: "error al consultar los posts por usuario",
+//       details: error.message
+//     });
+//   }
+// }
 
 export const getUsuarioById = async ( req, res ) => {
   try{

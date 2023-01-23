@@ -6,26 +6,23 @@ import Iniciarsesion from './components/Iniciarsesion/Iniciarsesion';
 import Miperfil from './components/Miperfil/Miperfil';
 import Registro from './components/Registro/Registro';
 import NavBarComercio from './layouts/Navbar';
-import ProductDetails from './components/Menu/ProductDetails';
-import Shoppingcart from './components/Menu/ShoppingCart';
-//import { cartprovider } from './components/Menu/Context/CartContext';
+
+import ShoppingCard from './components/ShoppingCard/ShoppingCard';
+
 
 function App() {
   return (
-
     <div className="App">
-      {/* <cartprovider> */}
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<NavBarComercio />}>
-              <Route index element={<Inicio />} />
-              <Route path='/Iniciarsesion' element={<Iniciarsesion />} />
-              <Route path='/Registro' element={<Registro />} />
-              <Route path='/Miperfil' element={<Miperfil />} />
-              <Route path='/Menu' element={<Menu />} />
-              <Route path='/Menu/:platoid' element={<ProductDetails />} />
-              <Route path='/Cart' element={<Shoppingcart />} />
-              <Route path='*' element={<Navigate replace to="/" />} />
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <NavBarComercio /> }>
+          <Route index element= { <Inicio /> }/>
+          <Route path='Menu' element= { <Menu /> }/>
+          <Route path='Iniciarsesion' element= { <Iniciarsesion /> }/>
+          <Route path='Registro' element= { <Registro /> }/>
+          <Route path='Miperfil' element= { <Miperfil /> }/>
+          <Route path='ShoppingCard' element= { <ShoppingCard /> }/>
+          <Route path='*' element= { <Navigate replace to="/" /> }/>
             </Route>
           </Routes>
 

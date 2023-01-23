@@ -1,53 +1,57 @@
-
+import { useEffect } from 'react';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-// import { getUsers } from '../api/Api.js';
+import { getUsers } from '../api/Api';
 import "./Miperfil.css"
-// import { Usuario } from './usuario';
-// import { UsuarioItem } from './usuarioItems';
+import { Usuario } from './usuario';
+import { UsuarioItem } from './usuarioItems';
+
 
 const Miperfil = () => {
  
+  // const [usuario, setUsuario]= useState([])
+    
+  // useEffect(()=> {
+      
+  //     const getUsers = async() => {
+  //         const result = await fetch(`${url_api}/usuarios`);
+  //         const usuario = await result.json();
+          
+          
+  //         console.log(usuario)
+  //         setUsuario(usuario)
+  //       }
+  //       getUsuario();
+  // }, []);
 
-        // const [usuario, setUsuario] = React.useState([]);
+
+        const [usuario, setUsuario] = React.useState([]);
       
-        // useEffect(() => {
-        //   getUsers()
-        //     .then((data) => {
-        //       setUsuario(data);
-        //     })
-        //     .catch((err) => {
-        //       console.log(err);
-        //     });
-        // });
+        useEffect(() => {
+          getUsers()
+            .then((data) => {
+              setUsuario(data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        getUsers()
+        });
       
-        // return (
-        //   <div className="App">
-        //     <h1>Listado de usuarios</h1>
       
-        //     <Usuario>
-        //       {
-        //         usuario.map((usuario) => (
-        //           <UsuarioItem
-        //             key={usuario._id}
-        //             nombre={usuario.name}
-        //             apellido={usuario.apellido}
-        //             direccion={usuario.direccion}
-        //             telefono={usuario.telefono}
-        //             email={usuario.email}
-        //           />
-      
-        //         ))
-        //       }
-        //     </Usuario>
-      
-        //   </div>
-        // )
+         
+     
       
    
 
 
     return (
+      <div className="App">
+      <h1>Listado de usuarios</h1>
+
+   
+
+   
     <section className="container-fluid miPerfil">
        <h1 className="pt-5 mb-5 fs-1 fw-bolder text-light tituloPerfil">Información de mi cuenta</h1>   
     <div className="seccionPerfil row">
@@ -70,6 +74,21 @@ const Miperfil = () => {
     <div>
         <h3 className="mt-5 mb-4 fs-2 fw-bolder misDatos text-light">Mis Datos</h3>
     </div>
+    <Usuario>
+        {
+          usuario.map((usuario) => (
+            <UsuarioItem
+              key={usuario._id}
+              nombre={usuario.nombre}
+              apellido={usuario.apellido}
+              direccion={usuario.direccion}
+              telefono={usuario.telefono}
+              email={usuario.email}
+            />
+
+          ))
+        }
+      </Usuario>
     <div>
         <label className="me-3 mt-3 mb-3">Nombre(s)</label>
         <input></input>
@@ -96,7 +115,7 @@ const Miperfil = () => {
     </div>
     </div>
     </section>  
-
+    </div>
     )
 }
         
