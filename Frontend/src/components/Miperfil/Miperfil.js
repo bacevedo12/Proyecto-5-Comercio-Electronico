@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
@@ -29,14 +28,14 @@ const Miperfil = () => {
         const [usuario, setUsuario] = React.useState([]);
       
         useEffect(() => {
-          getUser()
+          getUsers()
             .then((data) => {
               setUsuario(data);
             })
             .catch((err) => {
               console.log(err);
             });
-        getUse()
+        getUsers()
         });
       
       

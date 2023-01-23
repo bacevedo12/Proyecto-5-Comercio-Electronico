@@ -1,10 +1,18 @@
 import { TYPES } from "../actions/shoppingAction";
 
-export const shoppingInitialState = {
+const shoppingInitialState = {
+    products:[
+        {id:1,name:"producto1",price:100},
+        {id:2,name:"producto2",price:200},
+        {id:3,name:"producto3",price:300},
+        {id:4,name:"producto4",price:400},
+        {id:5,name:"producto5",price:500},
+        {id:6,name:"producto6",price:600},
+    ],
     cart:[]
 };
 
-export function shoppingReducer(state,action){
+ function shoppingReducer(state,action){
     switch(action.type){
         case TYPES.ADD_TO_CART:{
         let newItem = state.products.find(

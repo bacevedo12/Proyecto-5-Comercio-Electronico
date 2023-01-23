@@ -1,3 +1,4 @@
+// import { useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React, { useState } from "react";
@@ -21,7 +22,7 @@ function Iniciarsesion() {
     let { name, value } = e.target;
     let newDatos = {...datos, [name]:value};
     setDatos(newDatos);
-  }
+  };
 
   const handleSubmit = async(e)=>{
     e.preventDefault();
@@ -30,9 +31,42 @@ function Iniciarsesion() {
     }else{
       let res = await axios.post("http://localhost:3005/auth/signin",datos);
       console.log(res.data);
+      return res;
         
     }
-  }
+  };
+
+  // const saveToken = async (token) => {
+  //   localStorage.setItem("token", token);
+  // }
+  // const readToken = async () => {
+  //   return localStorage.getItem("token");
+  // }
+  
+  // const login = async (username, password) => {
+  //   console.log(username);
+  //   console.log(password);
+  //   const result = await signIn(username, password);
+  //   console.log(result);
+  //   if (result) {
+  //     saveToken(result.data.token);
+  //     return true;
+  //   }
+  //   return false;
+  // };
+
+
+  // const username = useRef(null);
+  // const password = useRef(null);
+
+  // const handleSubmit = () => {
+  //   const u = username.current.value;
+  //   const p = password.current.value;
+
+  //   login(u, p);
+  // };
+  
+
 
   // const handleSubmito = async(e)=>{
   //   e.preventDefault();
