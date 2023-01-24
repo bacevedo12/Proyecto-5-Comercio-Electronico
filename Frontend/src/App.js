@@ -1,11 +1,12 @@
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Inicio from './components/Inicio/Inicio';
-import Menu  from './components/Menu/Menu';
+import Menu from './components/Menu/Menu';
 import Iniciarsesion from './components/Iniciarsesion/Iniciarsesion';
 import Miperfil from './components/Miperfil/Miperfil';
 import Registro from './components/Registro/Registro';
 import NavBarComercio from './layouts/Navbar';
+
 import ShoppingCard from './components/ShoppingCard/ShoppingCard';
 // import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
@@ -36,7 +37,8 @@ function App() {
 
 
     </div>
-  );
+
+  );;
 }
 
 export default App;

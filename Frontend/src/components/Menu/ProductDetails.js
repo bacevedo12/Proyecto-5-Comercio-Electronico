@@ -4,7 +4,7 @@ import './Product_Details.css';
 //const platoCasero = menu.filter((element) => element.category === "Casero");
 //console.log (platoCasero)
 
-const Product_Details = () => {
+const ProductDetails = () => {
  
     return (
         <div className="fondo">
@@ -41,4 +41,4 @@ const Product_Details = () => {
     )
 }
 
-export default Product_Details
+export default ProductDetails

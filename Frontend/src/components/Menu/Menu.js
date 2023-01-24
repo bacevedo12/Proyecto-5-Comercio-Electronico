@@ -1,18 +1,22 @@
 import './Menu.css';
-//import menu from './Data.js'
+
 import Platos from "./Platos.js";
 import Instrucciones from './Instrucciones.js';
 import { useState, useEffect } from 'react';
-//import axios from 'axios'; 
+ 
 import { url_api } from '../api/Api';
+//import cartContext from './Context/ShoppingCartContext';
+
 
 
 // import Imagen_Fondo from '../imagenes/foto-comidaadomicilio.jpg'
 //const platoCasero = menu.filter((element) => element.category === "Casero");
 //console.log (platoCasero)
 
+
 const Menu = () => {
- 
+
+    
     const [menu, setMenu]= useState([])
     
     useEffect(()=> {
@@ -28,11 +32,14 @@ const Menu = () => {
           getMenu();
     }, [])
 
+    
+
     const platoCasero = menu.filter((element) => element.category === "Casero");
     const legumbres = menu.filter((element) => element.category === "Legumbres");
     const vvegetariano = menu.filter((element) => element.category === "Vegetariano");
 
     return (
+    
         <div className="fondo">
              <div className='container p-0'>
                                
