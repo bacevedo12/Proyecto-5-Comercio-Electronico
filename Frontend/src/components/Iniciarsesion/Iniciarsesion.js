@@ -4,13 +4,13 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from "react";
 import axios from 'axios';
 import "./iniciarsesion.css";
-// import { useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 // const url_api = 'http://localhost:3005';
 
 
 function Iniciarsesion() {
 
-// const navigate = useNavigate()
+const navigate = useNavigate()
 
   const [datos, setDatos] = useState({
     username:"",
@@ -31,8 +31,11 @@ function Iniciarsesion() {
     }else{
       let res = await axios.post("http://localhost:3005/auth/signin",datos);
       console.log(res.data);
-      return res;
-        
+      // return res;
+      const token = res.data.token
+      console.log(token)
+      localStorage.setItem("user",token)
+      navigate("/Miperfil")  
     }
   };
 

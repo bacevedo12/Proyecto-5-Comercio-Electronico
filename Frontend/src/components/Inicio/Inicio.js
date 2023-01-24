@@ -16,10 +16,10 @@ const Home = () => {
                 <Button as={Link} to="/Menu" className="text-light m-5 " variant="info">Ver menú</Button>
                 </div>
             </div>   
-            <div className="col-6 p-0">
+            <div className="col-m-6 col-s-12 c p-0">
                 <img alt="logo"src={ menusemanal } className="imagenMenuSemanal"/>
             </div>
-            <div className="reservaInicio col-6 align-items-center">
+            <div className="reservaInicio col-m-6 col-s-12 align-items-center">
          <h1 className="parrafoReserva pt-5 mt-5">Registrate gratis</h1>
          <h3 className="parrafoReserva mt-3">Y recibe todas nuestras <br></br>promociones de menus!!!!</h3>
          <Button as={Link} to="/Registro"className="botonRegistrate text-light mt-5" variant="info">Registrate Aquí</Button> 

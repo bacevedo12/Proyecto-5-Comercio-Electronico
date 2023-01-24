@@ -7,12 +7,15 @@ import Miperfil from './components/Miperfil/Miperfil';
 import Registro from './components/Registro/Registro';
 import NavBarComercio from './layouts/Navbar';
 import ShoppingCard from './components/ShoppingCard/ShoppingCard';
+// import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      
+    {/* <PayPalScriptProvider opcion= {{"client-id":"AVx3UcHnRMBHQ_L3rZjZE0cI6wFvn1HcifiBzJGYPT7xyV4ntCWgdFpuk4fAVCOtV6CN5Sae-wsrNQ4X"}}> */}
+        <BrowserRouter>
       <Routes>
         <Route path='/' element={ <NavBarComercio /> }>
           <Route index element= { <Inicio /> }/>
@@ -27,7 +30,8 @@ function App() {
       </Routes>
       
       </BrowserRouter>
-
+    {/* </PayPalScriptProvider> */}
+      
 
 
 

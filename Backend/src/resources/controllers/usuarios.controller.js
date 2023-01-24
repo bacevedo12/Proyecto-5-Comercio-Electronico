@@ -10,12 +10,14 @@ export const createUsuario = async ( req, res ) => {
     let resultado;
     user.save().then((data) => resultado = data);
     return res.json ({
+      success: true,
       msg: "persona creada",
       details: resultado
     });
   }catch (error) {
     console.log(error);
     return res.json({
+    success: false,
      msg: "ocurrio un error",
      details: error.message
     });
@@ -108,8 +110,9 @@ export const signin = async (req, res) => {
     const u = await usuarioModel.findOne(filter);
     if (u && u?.validPassword(req.body.password)) {
       return res.json({
+        success: true,
         msg: "ok",
-        token: getToken(req.body.username)
+        token: getToken(req.body.username),
       });
     } else {
       console.warn("intento de ingreso no autorizaado!! ");
@@ -120,6 +123,7 @@ export const signin = async (req, res) => {
     }
   } catch (error) {
     return res.json({
+      success: false,
       msg: "error en autenticación",
       details: error.message
     })

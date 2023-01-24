@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { getUsers } from '../api/Api';
@@ -25,7 +25,7 @@ const Miperfil = () => {
   // }, []);
 
 
-        const [usuario, setUsuario] = React.useState([]);
+        const [usuario, setUsuario] = useState([]);
       
         useEffect(() => {
           getUsers()
@@ -47,7 +47,7 @@ const Miperfil = () => {
 
     return (
       <div className="App">
-      <h1>Listado de usuarios</h1>
+
 
    
 

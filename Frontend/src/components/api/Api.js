@@ -4,7 +4,7 @@ export const url_api = "http://localhost:3005";
 
 export const getUsers = async() => {
   
-  const result = await axios.get(`${url_api}/profile`);
+  const result = await axios.get(`${url_api}/usuario`);
   console.log(result);
   return result.data.usuarios;
 }

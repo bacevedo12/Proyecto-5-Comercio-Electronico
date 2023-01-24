@@ -4,6 +4,7 @@ import { shoppingInitialState, shoppingReducer } from "./reducers/shoppingReduce
 import ProductItem from "./ProductItem.js";
 import CartItem from "./cartItem/CartItem.js"
 import { TYPES } from "./actions/shoppingAction.js";
+import PayPal from "../PayPal/PayPal.js";
 
 function ShoppingCard () {
     const [state,dispatch] = useReducer(shoppingReducer, shoppingInitialState);
@@ -44,7 +45,11 @@ function ShoppingCard () {
                     <CartItem key={index}data={item}delFromCart={delFromCart}/>)
                 }
             </article>
+            <div>
+             <PayPal/>
+        </div>
         </section>
+        
     )
 }
 
